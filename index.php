@@ -10,9 +10,17 @@ require("vendor/autoload.php");
 $f3 = Base::instance();
 
 session_start();
+//Define default route
+
+$f3->route('GET /', function () {
+    /*$view = new Template();
+    echo $view->render('views/form1.html');*/
+    echo "<h1>My Pets</h1>";
+    echo "<a href='order'>Order a Pet</a>";
+});
 
 //Define default route
-$f3->route('GET /', function () {
+$f3->route('GET /order', function () {
     $view = new Template();
     echo $view->render('views/form1.html');
     /*echo "<h1>My Pets</h1>";*/
