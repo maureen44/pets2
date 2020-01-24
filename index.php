@@ -16,7 +16,27 @@ $f3->route('GET /', function () {
     $view = new Template();
     echo $view->render('views/form1.html');
     /*echo "<h1>My Pets</h1>";*/
-    echo "<a href='order'>Order a Pet</a>";
+    //echo "<a href='order'>Order a Pet</a>";
+});
+
+
+$f3->route('GET /@item', function ($f3, $params) {
+    $item = $params['item'];
+    echo "<p>Your animal is $item</p>";
+
+    if ($item == "dog") {
+        echo "<p>bark</p>";
+    } else if ($item == "cat") {
+        echo "<p>Meow</p>";
+    } else if ($item == "cow") {
+        echo "<p>Moo</p>";
+    } else if ($item == "goat") {
+        echo "<p>bleet</p>";
+    } else if ($item == "pig") {
+        echo "<p>oink</p>";
+    } else {
+        $f3->error(404);
+    }
 });
 
 //Define default route
