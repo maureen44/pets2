@@ -1,0 +1,13 @@
+{
+  "name": "mkariuki2/IT328/pets2",
+  "authors": [
+
+    {
+      "name": "Maureen Kariuki",
+      "email": "mkariuki2@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
